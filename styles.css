@@ -32,6 +32,7 @@ button {
     background-color: #007BFF;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 button:hover {
     background-color: #0056b3;
@@ -41,7 +42,9 @@ button:hover {
     top: 10px;
     right: 10px;
     width: 30px;
+    height: 30px;
     cursor: pointer;
+    fill: #333;
 }
 .menu {
     display: none;
@@ -55,11 +58,20 @@ button:hover {
     z-index: 1000;
 }
 .menu a {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 10px;
     text-decoration: none;
     color: #333;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+.menu a svg {
+    margin-right: 10px;
 }
 .menu a:hover {
     background: #f4f4f4;
+}
+.menu a:active {
+    background: #e0e0e0;
 }
