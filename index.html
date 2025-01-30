@@ -34,7 +34,7 @@
             const user = users.find(user => user.username === username && user.password === password);
 
             if (user) {
-                alert(`Welcome, ${user.username}!`);
+                window.location.href = 'home.html'; // เปลี่ยนหน้าเมื่อเข้าสู่ระบบสำเร็จ
             } else {
                 document.getElementById('errorMessage').textContent = 'Invalid username or password';
             }
