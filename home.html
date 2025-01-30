@@ -3,23 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f8ff;
+        .menu-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
         }
-        h1 {
+        .menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 1000;
+        }
+        .menu a {
+            display: block;
+            text-decoration: none;
             color: #333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .menu a:hover {
+            background: #f4f4f4;
         }
     </style>
 </head>
 <body>
-    <h1>Home to the Dashboard!</h1>
+    <img src="menu-icon.png" alt="Menu Icon" class="menu-icon" id="menuIcon">
+    <div class="menu" id="menu">
+        <a href="account.html">Account</a>
+        <a href="index.html" id="logout">Logout</a>
+    </div>
+
+    <div class="container">
+        <h1>Welcome to Home Page</h1>
+        <p>This is the home page with a menu icon.</p>
+    </div>
+
+    <script>
+        const menuIcon = document.getElementById('menuIcon');
+        const menu = document.getElementById('menu');
+        const logoutLink = document.getElementById('logout');
+
+        menuIcon.addEventListener('click', () => {
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        logoutLink.addEventListener('click', () => {
+            alert('You have been logged out!');
+        });
+    </script>
 </body>
 </html>

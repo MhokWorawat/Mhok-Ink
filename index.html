@@ -19,22 +19,14 @@
 
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // ป้องกันการรีเฟรชหน้าเว็บ
+            event.preventDefault();
 
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
-            // กำหนดผู้ใช้ที่อนุญาต
-            const users = [
-                { username: 'Mhok', password: '12345' },
-                { username: 'Ink', password: '12345' }
-            ];
-
-            // ตรวจสอบการล็อกอิน
-            const user = users.find(user => user.username === username && user.password === password);
-
-            if (user) {
-                window.location.href = 'home.html'; // เปลี่ยนหน้าเมื่อเข้าสู่ระบบสำเร็จ
+            if ((username === 'Mhok' && password === '12345') || 
+                (username === 'Ink' && password === '12345')) {
+                window.location.href = 'home.html';
             } else {
                 document.getElementById('errorMessage').textContent = 'Invalid username or password';
             }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Account Settings</h1>
+        <form id="accountForm">
+            <label for="profilePicture">Profile Picture:</label>
+            <input type="file" id="profilePicture" accept="image/*">
+            <label for="username">New Username:</label>
+            <input type="text" id="username" placeholder="Enter new username">
+            <label for="password">New Password:</label>
+            <input type="password" id="password" placeholder="Enter new password">
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('accountForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Changes saved!');
+        });
+    </script>
+</body>
+</html>
