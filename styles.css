@@ -8,12 +8,14 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     text-align: center;
+    overflow: hidden;
 }
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    position: relative;
 }
 
 /* Index Page */
@@ -28,6 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 .index-page .image-container {
     width: 220px;
@@ -91,7 +94,8 @@ body {
     display: none;
     z-index: 1;
     flex-direction: column;
-    transition: transform 0.6s ease-in-out;
+    justify-content: flex-start;
+    padding: 20px;
 }
 .open-card-button, .close-card-button {
     padding: 10px 20px;
@@ -121,20 +125,10 @@ body {
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
-    .index-page .card, 
     .card-container {
-        width: 90%;
-        max-width: 350px;
-        padding: 20px;
+        transform: scale(0.8);
     }
-
-    .index-page .image-container {
-        width: 180px;
-        height: 180px;
-    }
-
-    .open-card-button, .close-card-button {
-        font-size: 14px;
-        padding: 8px 16px;
+    .card-back {
+        justify-content: center;
     }
 }
