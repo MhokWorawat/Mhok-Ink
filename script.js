@@ -9,7 +9,8 @@ document.getElementById("openCardButton").addEventListener("click", function() {
 
 document.getElementById("closeCardButton").addEventListener("click", function() {
     document.getElementById("cardBack").style.display = "none";
-    document.getElementById("messageVideo").pause();
-    document.getElementById("messageVideo").style.display = "none";
+    let video = document.getElementById("messageVideo");
+    video.pause();
+    video.style.display = "none";
     document.getElementById("openCardButton").style.display = "block";
 });
