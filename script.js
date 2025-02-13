@@ -5,6 +5,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const cardBack = document.querySelector(".card-back");
     const video = document.getElementById("messageVideo");
     const container = document.querySelector(".container");
+    const backButton = document.createElement("button");
+
+    // Create a back button
+    backButton.textContent = "Back to Home";
+    backButton.classList.add("back-button");
+    backButton.style.padding = "10px 20px";
+    backButton.style.fontSize = "16px";
+    backButton.style.backgroundColor = "#d6336c";
+    backButton.style.border = "none";
+    backButton.style.borderRadius = "8px";
+    backButton.style.cursor = "pointer";
+    backButton.style.fontWeight = "600";
+    backButton.style.color = "white";
+    backButton.style.marginTop = "15px";
+    backButton.style.display = "block";
+    backButton.onclick = function () {
+        window.location.href = "index.html";
+    };
+    document.body.appendChild(backButton);
 
     function adjustCardSize() {
         let screenWidth = window.innerWidth;
