@@ -119,7 +119,20 @@ body {
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
+    .index-page .card, 
     .card-container {
-        transform: scale(0.8);
+        width: 90%;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .index-page .image-container {
+        width: 180px;
+        height: 180px;
+    }
+
+    .open-card-button, .close-card-button {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
