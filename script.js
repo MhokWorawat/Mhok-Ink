@@ -1,3 +1,5 @@
-document.getElementById("nextButton").addEventListener("click", function() {
-    window.location.href = "home.html";
+/* script.js */
+document.getElementById("revealButton").addEventListener("click", function() {
+    document.getElementById("hiddenMessage").style.display = "block";
+    this.style.display = "none";
 });
