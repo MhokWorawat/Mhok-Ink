@@ -98,10 +98,6 @@ body {
     padding: 20px;
     transition: opacity 0.3s ease-in-out;
 }
-.card-front.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
 .card-back {
     transform: rotateY(180deg);
     display: none;
