@@ -95,11 +95,12 @@ body {
     display: none;
     z-index: 1;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 20px;
     width: 90%;
     max-width: 350px;
     height: auto;
+    min-height: 400px;
 }
 .open-card-button, .close-card-button {
     padding: 10px 20px;
@@ -136,8 +137,9 @@ body {
         max-width: 350px;
     }
     .card-back {
-        justify-content: center;
+        justify-content: flex-start;
         width: 90%;
         max-width: 350px;
+        min-height: 400px;
     }
 }
