@@ -9,16 +9,17 @@
 </head>
 <body>
     <div class="container">
-        <div class="card-container" id="cardContainer">
-            <div class="card-front">
-                <h1 class="title">💌</h1>
-                <h1 class="title">A Special Message</h1>
-                <button class="open-card-button" id="openCardButton">Open Card</button>
+        <div class="chat-card">
+            <h1 class="title">📩 A Special Message</h1>
+            <button class="reveal-button" id="revealButton">Click to Read</button>
+            <div class="hidden-message" id="hiddenMessage">
+                <p>💌 Dear Ink, you are the most special person in my life. I am grateful for every moment we share. Happy Valentine’s Day! 💖</p>
             </div>
-            <div class="card-back" id="cardBack">
-                <img src="images/love-message.jpg" alt="Love Message" class="message-image">
-                <p class="message-text">💖 Dear Ink, you make my world brighter every day. I cherish every moment with you. Happy Valentine’s Day! 💕</p>
+            <div class="input-container">
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button class="send-button" id="sendButton">Send</button>
             </div>
+            <div class="chat-box" id="chatBox"></div>
         </div>
     </div>
     <script src="script.js"></script>
