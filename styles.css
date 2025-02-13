@@ -1,4 +1,3 @@
-
 /* styles.css */
 body {
     display: flex;
@@ -16,96 +15,62 @@ body {
     align-items: center;
     height: 100%;
 }
-.card {
-    background: #fff;
-    padding: 30px;
+.card-container {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    position: relative;
+}
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    background: white;
     border-radius: 15px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
 }
-.title {
-    font-size: 28px;
+.card-front {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+.card-back {
+    transform: rotateY(180deg);
+    display: none;
+    z-index: 1;
+}
+.open-card-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #d6336c;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
     font-weight: 600;
-    color: #d6336c;
+    color: white;
+}
+.open-card-button:hover {
+    background-color: #a32450;
+}
+.message-image {
+    width: 80%;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
-.subtitle {
+.message-text {
     font-size: 18px;
-    font-weight: 400;
     color: #a32450;
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-.image-container {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    border: 5px solid white;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
-}
-.profile-pic {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.next-button {
-    padding: 12px 24px;
-    font-size: 18px;
-    background-color: #d6336c;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 600;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    transition: background 0.3s, transform 0.2s;
-    margin-top: 15px;
-}
-.next-button:hover {
-    background-color: #a32450;
-    transform: scale(1.05);
-}
-.input-container {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-}
-.input-container input {
     padding: 10px;
-    border: 2px solid #d6336c;
-    border-radius: 8px;
-    font-size: 16px;
-    width: 70%;
 }
-.send-button {
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #d6336c;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    color: white;
-}
-.chat-box {
-    margin-top: 20px;
-    text-align: left;
-    max-height: 150px;
-    overflow-y: auto;
-}
-
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
-    .card {
-        transform: scale(0.7);
+    .card-container {
+        transform: scale(0.8);
     }
 }
