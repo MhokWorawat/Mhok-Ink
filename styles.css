@@ -129,7 +129,7 @@ body {
     text-align: center;
 }
 .message-text::before {
-    content: "To my Ink \A";
+    content: "💖 Dear Ink \A";
     font-weight: bold;
     font-size: 22px;
     color: #d6336c;
