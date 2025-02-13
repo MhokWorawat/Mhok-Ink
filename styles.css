@@ -67,6 +67,40 @@ body {
     color: #a32450;
     padding: 10px;
 }
+.envelope {
+    position: relative;
+    width: 100px;
+    height: 70px;
+    background: #d6336c;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.envelope::before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 35px solid #d6336c;
+}
+.envelope::after {
+    content: "✉️";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: white;
+}
+.special-message {
+    font-size: 22px;
+    font-weight: 600;
+    color: #d6336c;
+    margin-bottom: 15px;
+}
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
