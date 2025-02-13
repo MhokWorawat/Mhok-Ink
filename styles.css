@@ -17,7 +17,7 @@ body {
     height: 100%;
     position: relative;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     max-width: 500px;
 }
 
@@ -155,18 +155,18 @@ body {
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     .container {
-        width: 70%;
-        max-width: 350px;
+        width: 85%;
+        max-width: 90vw;
     }
     .card-container {
         width: 100%;
-        max-width: 350px;
-        min-height: 500px;
+        max-width: 90vw;
+        min-height: auto;
     }
     .card-back {
         justify-content: flex-start;
         width: 100%;
-        max-width: 350px;
-        min-height: 500px;
+        max-width: 90vw;
+        min-height: auto;
     }
 }
