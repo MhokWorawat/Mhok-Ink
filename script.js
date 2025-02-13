@@ -9,8 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function adjustCardSize() {
         let screenWidth = window.innerWidth;
         let screenHeight = window.innerHeight;
-        let cardWidth = Math.min(screenWidth * 0.9, 400);
-        let cardHeight = Math.min(screenHeight * 0.9, 600);
+        let scaleFactor = screenWidth < 768 ? 0.7 : 1;
+        let cardWidth = Math.min(screenWidth * 0.9 * scaleFactor, 400 * scaleFactor);
+        let cardHeight = Math.min(screenHeight * 0.9 * scaleFactor, 600 * scaleFactor);
 
         container.style.width = `${cardWidth}px`;
         container.style.height = `${cardHeight}px`;
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     adjustCardSize();
 
     openCardButton.addEventListener("click", function () {
-        cardFront.classList.add("hidden"); // ซ่อนการ์ด 📩 A Special Message
+        cardFront.classList.add("hidden");
         cardBack.style.display = "flex";
         setTimeout(() => {
             cardBack.style.opacity = "1";
@@ -34,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cardBack.style.opacity = "0";
         setTimeout(() => {
             cardBack.style.display = "none";
-            cardFront.classList.remove("hidden"); // แสดงการ์ด 📩 A Special Message กลับมา
+            cardFront.classList.remove("hidden");
             video.pause();
             video.style.display = "none";
         }, 300);
