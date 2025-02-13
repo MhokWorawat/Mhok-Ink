@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const video = document.getElementById("messageVideo");
 
     openCardButton.addEventListener("click", function () {
-        cardFront.style.display = "none"; // ซ่อนการ์ด 📩 A Special Message
+        cardFront.style.display = "none";
         cardBack.style.display = "flex";
         setTimeout(() => {
             cardBack.style.opacity = "1";
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cardBack.style.opacity = "0";
         setTimeout(() => {
             cardBack.style.display = "none";
-            cardFront.style.display = "flex"; // แสดงการ์ด 📩 A Special Message กลับมา
+            cardFront.style.display = "flex";
             video.pause();
             video.style.display = "none";
         }, 300);
