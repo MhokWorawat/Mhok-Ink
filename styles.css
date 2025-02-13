@@ -90,6 +90,7 @@ body {
     transform: rotateY(180deg);
     display: none;
     z-index: 1;
+    flex-direction: column;
 }
 .open-card-button, .close-card-button {
     padding: 10px 20px;
@@ -109,7 +110,7 @@ body {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
-    display: none;
+    display: block;
 }
 .message-text {
     font-size: 18px;
