@@ -96,11 +96,6 @@ body {
     transform: rotateY(0deg);
     z-index: 2;
     padding: 20px;
-    transition: opacity 0.3s ease-in-out;
-}
-.card-front.hidden {
-    opacity: 0;
-    pointer-events: none;
 }
 .card-back {
     transform: rotateY(180deg);
@@ -115,7 +110,7 @@ body {
     min-height: 550px;
 }
 .card-back .title {
-    display: none;
+    display: none; /* ซ่อน A Special Message เมื่อเปิดการ์ด */
 }
 .message-video {
     width: 100%;
@@ -173,6 +168,6 @@ body {
         min-height: 500px;
     }
     .card-front .title {
-        display: block;
+        display: block; /* แสดง A Special Message เมื่อปิดการ์ด */
     }
 }
