@@ -5,30 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const cardBack = document.querySelector(".card-back");
     const video = document.getElementById("messageVideo");
     const container = document.querySelector(".container");
-    const backButton = document.createElement("button");
-
-    // Create a back button
-    backButton.textContent = "Back to Home";
-    backButton.classList.add("back-button");
-    backButton.style.padding = "10px 20px";
-    backButton.style.fontSize = "16px";
-    backButton.style.backgroundColor = "#d6336c";
-    backButton.style.border = "none";
-    backButton.style.borderRadius = "8px";
-    backButton.style.cursor = "pointer";
-    backButton.style.fontWeight = "600";
-    backButton.style.color = "white";
-    backButton.style.marginTop = "15px";
-    backButton.style.display = "block";
-    backButton.onclick = function () {
-        window.location.href = "index.html";
-    };
-    document.body.appendChild(backButton);
 
     function adjustCardSize() {
         let screenWidth = window.innerWidth;
         let screenHeight = window.innerHeight;
-        let scaleFactor = screenWidth < 768 ? 0.7 : 1; // ลดขนาด 70% ในมือถือ
+        let scaleFactor = screenWidth < 768 ? 0.7 : 1;
         let cardWidth = Math.min(screenWidth * 0.9 * scaleFactor, 400 * scaleFactor);
         let cardHeight = Math.min(screenHeight * 0.9 * scaleFactor, 600 * scaleFactor);
 
@@ -40,18 +21,18 @@ document.addEventListener("DOMContentLoaded", function () {
     adjustCardSize();
 
     openCardButton.addEventListener("click", function () {
-        cardFront.classList.add("hidden"); // ซ่อนการ์ด 📩 A Special Message
+        cardFront.classList.add("hidden");
         cardBack.style.display = "flex";
         setTimeout(() => {
             cardBack.style.opacity = "1";
         }, 50);
 
         video.style.display = "block";
-        video.currentTime = 0; // เล่นวิดีโอใหม่ทุกครั้ง
+        video.currentTime = 0;
         
-        video.muted = true; // เริ่มต้นแบบปิดเสียงก่อน
+        video.muted = true;
         video.play().then(() => {
-            video.muted = false; // เปิดเสียงเมื่อเล่นสำเร็จ
+            video.muted = false;
         }).catch(error => {
             console.log("Autoplay failed, requiring user interaction", error);
         });
@@ -61,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cardBack.style.opacity = "0";
         setTimeout(() => {
             cardBack.style.display = "none";
-            cardFront.classList.remove("hidden"); // แสดงการ์ด 📩 A Special Message กลับมา
+            cardFront.classList.remove("hidden");
             video.pause();
             video.style.display = "none";
         }, 300);
