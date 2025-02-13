@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const openCardButton = document.getElementById("openCardButton");
     const closeCardButton = document.getElementById("closeCardButton");
-    const cardFront = document.getElementById("cardFront");
-    const cardBack = document.getElementById("cardBack");
+    const cardFront = document.querySelector(".card-front");
+    const cardBack = document.querySelector(".card-back");
     const video = document.getElementById("messageVideo");
 
     openCardButton.addEventListener("click", function () {
