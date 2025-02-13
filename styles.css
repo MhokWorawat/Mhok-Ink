@@ -17,6 +17,7 @@ body {
     height: 100%;
     position: relative;
     flex-direction: column;
+    transform: scale(0.9); /* ลดขนาดลง 90% */
 }
 
 /* Index Page */
@@ -136,6 +137,9 @@ body {
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
+    .container {
+        transform: scale(0.9); /* ลดขนาดลง 90% บนมือถือ */
+    }
     .card-container {
         transform: scale(1);
         width: 90%;
