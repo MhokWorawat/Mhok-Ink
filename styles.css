@@ -18,7 +18,7 @@ body {
     position: relative;
     flex-direction: column;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 /* Index Page */
@@ -28,7 +28,7 @@ body {
     border-radius: 15px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
     text-align: center;
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -36,8 +36,8 @@ body {
     position: relative;
 }
 .index-page .image-container {
-    width: 220px;
-    height: 220px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     border: 5px solid white;
     overflow: hidden;
@@ -70,14 +70,14 @@ body {
 /* Home Page */
 .card-container {
     width: 90%;
-    max-width: 350px;
+    max-width: 400px;
     perspective: 1000px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
+    min-height: 550px;
 }
 .card-front, .card-back {
     width: 100%;
@@ -105,9 +105,9 @@ body {
     justify-content: center;
     padding: 20px;
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     height: auto;
-    min-height: 500px;
+    min-height: 550px;
 }
 .open-card-button, .close-card-button {
     padding: 10px 20px;
@@ -128,7 +128,7 @@ body {
     border-radius: 10px;
     margin-bottom: 10px;
     display: none;
-    max-height: 400px;
+    max-height: 450px;
 }
 .message-text {
     font-size: 18px;
