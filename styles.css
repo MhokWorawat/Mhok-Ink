@@ -1,3 +1,4 @@
+/* styles.css */
 body {
     display: flex;
     justify-content: center;
@@ -96,6 +97,7 @@ body {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
+    display: none;
 }
 .message-text {
     font-size: 18px;
