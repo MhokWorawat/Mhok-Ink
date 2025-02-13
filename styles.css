@@ -114,6 +114,7 @@ body {
     font-weight: bold;
     margin-bottom: 15px;
     margin-top: 10px;
+    display: none; /* ซ่อน A Special Message */
 }
 .message-video {
     width: 100%;
@@ -127,6 +128,16 @@ body {
     font-size: 18px;
     color: #a32450;
     padding: 10px;
+    text-align: center;
+}
+.message-text::before {
+    content: "To my Ink \A";
+    font-weight: bold;
+    font-size: 22px;
+    color: #d6336c;
+    display: block;
+    margin-bottom: 10px;
+    white-space: pre;
 }
 .open-card-button, .close-card-button {
     padding: 10px 20px;
@@ -146,7 +157,7 @@ body {
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     .container {
-        width: 70%;
+        width: 75%;
         max-width: 350px;
     }
     .card-container {
