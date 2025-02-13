@@ -91,6 +91,7 @@ body {
     display: none;
     z-index: 1;
     flex-direction: column;
+    transition: transform 0.6s ease-in-out;
 }
 .open-card-button, .close-card-button {
     padding: 10px 20px;
