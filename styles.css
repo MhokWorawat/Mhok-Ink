@@ -102,12 +102,31 @@ body {
     display: none;
     z-index: 1;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 20px;
     width: 100%;
     max-width: 400px;
     height: auto;
     min-height: 550px;
+}
+.card-back .title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.message-video {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    display: none;
+    max-height: 450px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.message-text {
+    font-size: 18px;
+    color: #a32450;
+    padding: 10px;
 }
 .open-card-button, .close-card-button {
     padding: 10px 20px;
@@ -123,23 +142,11 @@ body {
 .open-card-button:hover, .close-card-button:hover {
     background-color: #a32450;
 }
-.message-video {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    display: none;
-    max-height: 450px;
-}
-.message-text {
-    font-size: 18px;
-    color: #a32450;
-    padding: 10px;
-}
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     .container {
-        width: 90%;
+        width: 70%;
         max-width: 350px;
     }
     .card-container {
@@ -148,7 +155,7 @@ body {
         min-height: 500px;
     }
     .card-back {
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
         max-width: 350px;
         min-height: 500px;
