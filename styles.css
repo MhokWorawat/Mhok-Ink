@@ -1,13 +1,11 @@
-
 /* styles.css */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: pink;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     margin: 0;
-    flex-direction: column;
     font-family: 'Poppins', sans-serif;
 }
 .container {
@@ -16,14 +14,27 @@ body {
     flex-direction: column;
     align-items: center;
 }
-.message {
-    font-size: 22px;
-    font-weight: 400;
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
     text-align: center;
-    margin-bottom: 15px;
-    color: #ff4081;
+    max-width: 400px;
+    width: 100%;
+}
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #d6336c;
+    margin-bottom: 10px;
+}
+.subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #a32450;
+    margin-bottom: 20px;
     line-height: 1.5;
-    max-width: 80%;
 }
 .image-container {
     width: 220px;
@@ -42,17 +53,18 @@ body {
     object-fit: cover;
 }
 .next-button {
-    margin-top: 10px;
     padding: 12px 24px;
     font-size: 18px;
-    background-color: white;
+    background-color: #d6336c;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-weight: 600;
-    color: #ff4081;
+    color: white;
     font-family: 'Poppins', sans-serif;
+    transition: background 0.3s, transform 0.2s;
 }
 .next-button:hover {
-    background-color: #ffe0eb;
+    background-color: #a32450;
+    transform: scale(1.05);
 }
